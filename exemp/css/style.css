@@ -1,0 +1,76 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.devices {
+  background-color: #eaeaea;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(20, 5vw);
+  grid-auto-rows: 5vw;
+  padding-bottom: 5vw;
+}
+
+.device {
+  background-color: black;
+  position: relative;
+  border: solid 0.5vw black;
+  box-shadow: 0 0.25vw 0.5vw rgba(0, 0, 0, 0.2);
+}
+
+.device-screen {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.device-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.mobile {
+  border-top: solid 1vw black;
+  border-bottom: solid 2vw black;
+  grid-column: 2 / span 3;
+  grid-row: 3 / span 6;
+  border-radius: 1.5vw;
+}
+.mobile .device-screen {
+  border-radius: 1vw;
+}
+
+.tablet {
+  border-left: solid 2vw black;
+  grid-column: 13 / span 7;
+  grid-row: 4 / span 5;
+  border-radius: 1vw;
+}
+.tablet .device-screen {
+  border-radius: 0.5vw;
+}
+
+.laptop {
+  grid-column: 3/span 13;
+  grid-row: 2 / span 8;
+  border: solid 1vw #999999;
+}
+.laptop:after {
+  content: "";
+  position: absolute;
+  bottom: -3vw;
+  left: -7.5vw;
+  right: -7.5vw;
+  height: 3vw;
+  background-color: #999999;
+  border-radius: 0 0 1vw 1vw;
+}
